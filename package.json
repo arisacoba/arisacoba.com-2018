@@ -1,0 +1,9 @@
+{
+  "name": "arisacoba.github.io",
+  "version": "1.0.0",
+  "description": "Serving as a folio for Aris Acoba or an output for some random stuff",
+  "main": "index.js",
+  "repository": "https://github.com/arisacoba/arisacoba.github.io.git",
+  "author": "Aris Acoba <aris.acoba@gmail.com>",
+  "license": "MIT"
+}
