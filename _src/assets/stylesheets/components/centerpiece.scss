@@ -1,0 +1,14 @@
+.centerpiece{
+    width: 420px;
+    position: relative;
+    padding: 40px;
+    > .circle{
+        position: absolute;
+        top: 26%;
+        left: 34%;
+        width: 130px;
+    }
+    > .image{
+        width: 100%;
+    }
+}
