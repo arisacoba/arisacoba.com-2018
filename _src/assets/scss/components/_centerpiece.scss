@@ -1,0 +1,17 @@
+.centerpiece{
+    width: 340px;
+    position: relative;
+    margin: 40px;
+    > .circle{
+        position: absolute;
+        top: 24%;
+        left: 31%;
+        width: 130px;
+        animation: spin 8s infinite linear;
+        @include border-200($blue);
+    }
+    > .image{
+        width: 100%;
+        @include border-200($blue);
+    }
+}

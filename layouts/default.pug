@@ -1,0 +1,13 @@
+doctype html
+block vars
+html(lang="en")
+   head
+     title #{title}
+     meta(name="viewport" content="width=device-width, initial-scale=1.0")
+     meta(name="descritpion" content=description)
+     link(rel="stylesheet" href="assets/style.css")
+     link(rel="icon" href="./../assets/images/aris-acoba.ico")
+   body
+     include ../partials/header.pug
+     block content 
+     include ../partials/footer.pug

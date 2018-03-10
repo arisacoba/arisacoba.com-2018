@@ -1,0 +1,8 @@
+@mixin border-200($color){
+    border: 2px solid transparent;
+    cursor: pointer;
+    &:hover{
+        border-color: $blue;
+    }
+}
+
