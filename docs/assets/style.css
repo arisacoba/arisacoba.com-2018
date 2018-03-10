@@ -1,0 +1,630 @@
+/*! sanitize.css v5.0.0 | CC0 License | github.com/jonathantneal/sanitize.css */
+/* Document (https://html.spec.whatwg.org/multipage/semantics.html#semantics)
+   ========================================================================== */
+/**
+ * 1. Remove repeating backgrounds in all browsers (opinionated).
+ * 2. Add box sizing inheritence in all browsers (opinionated).
+ */
+@import url("https://fonts.googleapis.com/css?family=Rubik");
+*,
+::before,
+::after {
+  background-repeat: no-repeat;
+  /* 1 */
+  box-sizing: inherit;
+  /* 2 */
+}
+
+/**
+ * 1. Add text decoration inheritance in all browsers (opinionated).
+ * 2. Add vertical alignment inheritence in all browsers (opinionated).
+ */
+::before,
+::after {
+  text-decoration: inherit;
+  /* 1 */
+  vertical-align: inherit;
+  /* 2 */
+}
+
+/**
+ * 1. Add border box sizing in all browsers (opinionated).
+ * 2. Add the default cursor in all browsers (opinionated).
+ * 3. Prevent font size adjustments after orientation changes in IE and iOS.
+ */
+html {
+  box-sizing: border-box;
+  /* 1 */
+  cursor: default;
+  /* 2 */
+  -ms-text-size-adjust: 100%;
+  /* 3 */
+  -webkit-text-size-adjust: 100%;
+  /* 3 */
+}
+
+/* Sections (https://html.spec.whatwg.org/multipage/semantics.html#sections)
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ */
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block;
+}
+
+/**
+ * Remove the margin in all browsers (opinionated).
+ */
+body {
+  margin: 0;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: .67em 0;
+}
+
+/* Grouping content (https://html.spec.whatwg.org/multipage/semantics.html#grouping-content)
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in IE.
+ */
+figcaption,
+figure,
+main {
+  /* 1 */
+  display: block;
+}
+
+/**
+ * Add the correct margin in IE 8.
+ */
+figure {
+  margin: 1em 40px;
+}
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */
+}
+
+/**
+ * Remove the list style on navigation lists in all browsers (opinionated).
+ */
+nav ol,
+nav ul {
+  list-style: none;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/* Text-level semantics (https://html.spec.whatwg.org/multipage/semantics.html#text-level-semantics)
+   ========================================================================== */
+/**
+ * 1. Remove the gray background on active links in IE 10.
+ * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+ */
+a {
+  background-color: transparent;
+  /* 1 */
+  -webkit-text-decoration-skip: objects;
+  /* 2 */
+}
+
+/**
+ * 1. Remove the bottom border in Firefox 39-.
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */
+}
+
+/**
+ * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+ */
+b,
+strong {
+  font-weight: inherit;
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/**
+ * Add the correct font style in Android 4.3-.
+ */
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Add the correct background and color in IE 9-.
+ */
+mark {
+  background-color: #ffff00;
+  color: #000000;
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -.25em;
+}
+
+sup {
+  top: -.5em;
+}
+
+/*
+ * Remove the text shadow on text selections (opinionated).
+ * 1. Restore the coloring undone by defining the text shadow (opinionated).
+ */
+::-moz-selection {
+  background-color: #b3d4fc;
+  /* 1 */
+  color: #000000;
+  /* 1 */
+  text-shadow: none;
+}
+
+::selection {
+  background-color: #b3d4fc;
+  /* 1 */
+  color: #000000;
+  /* 1 */
+  text-shadow: none;
+}
+
+/* Embedded content (https://html.spec.whatwg.org/multipage/embedded-content.html#embedded-content)
+   ========================================================================== */
+/*
+ * Change the alignment on media elements in all browers (opinionated).
+ */
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/**
+ * Add the correct display in IE 9-.
+ */
+audio,
+video {
+  display: inline-block;
+}
+
+/**
+ * Add the correct display in iOS 4-7.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Remove the border on images inside links in IE 10-.
+ */
+img {
+  border-style: none;
+}
+
+/**
+ * Change the fill color to match the text color in all browsers (opinionated).
+ */
+svg {
+  fill: currentColor;
+}
+
+/**
+ * Hide the overflow in IE.
+ */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Tabular data (https://html.spec.whatwg.org/multipage/tables.html#tables)
+   ========================================================================== */
+/**
+ * Collapse border spacing
+ */
+table {
+  border-collapse: collapse;
+}
+
+/* Forms (https://html.spec.whatwg.org/multipage/forms.html#forms)
+   ========================================================================== */
+/**
+ * Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  margin: 0;
+}
+
+/**
+ * Inherit styling in all browsers (opinionated).
+ */
+button,
+input,
+select,
+textarea {
+  background-color: transparent;
+  color: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+ * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+ *    controls in Android 4.
+ * 2. Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */
+}
+
+/**
+ * 1. Add the correct display in IE 9-.
+ * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */
+}
+
+/**
+ * 1. Remove the default vertical scrollbar in IE.
+ * 2. Change the resize direction on textareas in all browsers (opinionated).
+ */
+textarea {
+  overflow: auto;
+  /* 1 */
+  resize: vertical;
+  /* 2 */
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10-.
+ * 2. Remove the padding in IE 10-.
+ */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/**
+ * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
+ */
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/* Interactive elements (https://html.spec.whatwg.org/multipage/forms.html#interactive-elements)
+   ========================================================================== */
+/*
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in Edge, IE, and Firefox.
+ */
+details,
+menu {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item;
+}
+
+/* Scripting (https://html.spec.whatwg.org/multipage/scripting.html#scripting-3)
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ */
+canvas {
+  display: inline-block;
+}
+
+/**
+ * Add the correct display in IE.
+ */
+template {
+  display: none;
+}
+
+/* User interaction (https://html.spec.whatwg.org/multipage/interaction.html#editing)
+   ========================================================================== */
+/*
+ * Remove the tapping delay on clickable elements (opinionated).
+ * 1. Remove the tapping delay in IE 10.
+ */
+a,
+area,
+button,
+input,
+label,
+select,
+summary,
+textarea,
+[tabindex] {
+  -ms-touch-action: manipulation;
+  /* 1 */
+  touch-action: manipulation;
+}
+
+/**
+ * Add the correct display in IE 10-.
+ */
+[hidden] {
+  display: none;
+}
+
+/* ARIA (https://w3c.github.io/html-aria/)
+   ========================================================================== */
+/**
+ * Change the cursor on busy elements (opinionated).
+ */
+[aria-busy="true"] {
+  cursor: progress;
+}
+
+/*
+ * Change the cursor on control elements (opinionated).
+ */
+[aria-controls] {
+  cursor: pointer;
+}
+
+/*
+ * Change the display on visually hidden accessible elements (opinionated).
+ */
+[aria-hidden="false"][hidden]:not(:focus) {
+  clip: rect(0, 0, 0, 0);
+  display: inherit;
+  position: absolute;
+}
+
+/*
+ * Change the cursor on disabled, not-editable, or otherwise
+ * inoperable elements (opinionated).
+ */
+[aria-disabled] {
+  cursor: default;
+}
+
+html {
+  box-sizing: box-content;
+  height: 100%;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  height: 100%;
+  background-color: #E33C3B;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+  line-height: 1.6em;
+}
+
+.centerpiece {
+  width: 340px;
+  position: relative;
+  margin: 40px;
+}
+
+.centerpiece > .circle {
+  position: absolute;
+  top: 24%;
+  left: 31%;
+  width: 130px;
+  animation: spin 8s infinite linear;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+
+.centerpiece > .circle:hover {
+  border-color: #42BFFE;
+}
+
+.centerpiece > .image {
+  width: 100%;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+
+.centerpiece > .image:hover {
+  border-color: #42BFFE;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIm5vZGVfbW9kdWxlcy9zYW5pdGl6ZS5jc3Mvc2FuaXRpemUuY3NzIiwiX3NyYy9hc3NldHMvc3R5bGUuc2NzcyIsInN0eWxlLmNzcyIsIl9zcmMvYXNzZXRzL3Njc3MvYmFzZS9fYm9keS5zY3NzIiwiX3NyYy9hc3NldHMvc2Nzcy9fdmFyaWFibGVzLnNjc3MiLCJfc3JjL2Fzc2V0cy9zY3NzL2NvbXBvbmVudHMvX2NlbnRlcnBpZWNlLnNjc3MiLCJfc3JjL2Fzc2V0cy9zY3NzL21peGlucy9fYm9yZGVycy5zY3NzIiwiX3NyYy9hc3NldHMvc2Nzcy9rZXlmcmFtZXMvX2NlbnRlcnBpZWNlLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsZ0ZBQWdGO0FBRWhGO2dGQUNnRjtBQUVoRjs7O0dBR0c7QUNQSCw2REFBWTtBRFNaOzs7RUFHQyw2QkFBNkI7RUFBRSxPQUFPO0VBQ3RDLG9CQUFvQjtFQUFFLE9BQU87Q0FDN0I7O0FBRUQ7OztHQUdHO0FBRUg7O0VBRUMseUJBQXlCO0VBQUUsT0FBTztFQUNsQyx3QkFBd0I7RUFBRSxPQUFPO0NBQ2pDOztBQUVEOzs7O0dBSUc7QUFFSDtFQUNDLHVCQUF1QjtFQUFFLE9BQU87RUFDaEMsZ0JBQWdCO0VBQUUsT0FBTztFQUN6QiwyQkFBMkI7RUFBRSxPQUFPO0VBQ3BDLCtCQUErQjtFQUFFLE9BQU87Q0FDeEM7O0FBRUQ7Z0ZBQ2dGO0FBRWhGOztHQUVHO0FBRUg7Ozs7OztFQU1DLGVBQWU7Q0FDZjs7QUFFRDs7R0FFRztBQUVIO0VBQ0MsVUFBVTtDQUNWOztBQUVEOzs7R0FHRztBQUVIO0VBQ0MsZUFBZTtFQUNmLGdCQUFnQjtDQUNoQjs7QUFFRDtnRkFDZ0Y7QUFFaEY7OztHQUdHO0FBRUg7OztFQUVPLE9BQU87RUFDYixlQUFlO0NBQ2Y7O0FBRUQ7O0dBRUc7QUFFSDtFQUNDLGlCQUFpQjtDQUNqQjs7QUFFRDs7O0dBR0c7QUFFSDtFQUNDLHdCQUF3QjtFQUFFLE9BQU87RUFDakMsVUFBVTtFQUFF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QyxXQUFXO0VBQUUsT0FBTztDQUNwQjs7QUFFRDs7R0FFRztBRUxIOztFRlNDLGFBQWE7Q0FDYjs7QUFFRDs7O0dBR0c7QUVOSDtFRlNDLDhCQUE4QjtFQUFFLE9BQU87RUFDdkMscUJBQXFCO0VBQUUsT0FBTztDQUM5Qjs7QUFFRDs7R0FFRztBRUxIOztFRlNDLHlCQUF5QjtDQUN6Qjs7QUFFRDs7O0dBR0c7QUFFSDtFQUNDLDJCQUEyQjtFQUFFLE9BQU87RUFDcEMsY0FBYztFQUFFLE9BQU87Q0FDdkI7O0FBRUQ7Z0ZBQ2dGO0FBRWhGOzs7R0FHRztBQUVIOztFQUVDLGVBQWU7Q0FDZjs7QUFFRDs7R0FFRztBQUVIO0VBQ0MsbUJBQW1CO0NBQ25COztBQUVEO2dGQUNnRjtBQUVoRjs7R0FFRztBQUVIO0VBQ0Msc0JBQXNCO0NBQ3RCOztBQUVEOztHQUVHO0FBRUg7RUFDQyxjQUFjO0NBQ2Q7O0FBRUQ7Z0ZBQ2dGO0FBRWhGOzs7R0FHRztBQUVIOzs7Ozs7Ozs7RUFTQywrQkFBK0I7RUFBRSxPQUFPO0VBQ3hDLDJCQUEyQjtDQUMzQjs7QUFFRDs7R0FFRztBRVpIO0VGZUMsY0FBYztDQUNkOztBQUVEO2dGQUNnRjtBQUVoRjs7R0FFRztBRWRIO0VGaUJDLGlCQUFpQjtDQUNqQjs7QUFFRDs7R0FFRztBRWZIO0VGa0JDLGdCQUFnQjtDQUNoQjs7QUFFRDs7R0FFRztBRWhCSDtFRm1CQyx1QkFBVTtFQUNWLGlCQUFpQjtFQUNqQixtQkFBbUI7Q0FDbkI7O0FBRUQ7OztHQUdHO0FFakJIO0VGb0JDLGdCQUFnQjtDQUNoQjs7QUc1a0JEO0VBQ0ksd0JBQXdCO0VBQ3hCLGFBQWE7Q0FDaEI7O0FBRUQ7RUFDSSxvQkFBb0I7Q0FDdkI7O0FBRUQ7RUFDQyxhQUFhO0VBQ2IsMEJDVm1CO0VEV25CLHFCQUFjO0VBQWQsY0FBYztFQUNkLHNCQUF3QjtNQUF4Qix3QkFBd0I7RUFDeEIsdUJBQW9CO01BQXBCLG9CQUFvQjtFQUNwQixpQ0NWNEI7RURXNUIsZ0JBQWdCO0VBQ2hCLG1CQUFtQjtDQUNuQjs7QUVsQkQ7RUFDSSxhQUFhO0VBQ2IsbUJBQW1CO0VBQ25CLGFBQWE7Q0FhaEI7O0FBaEJEO0VBS1EsbUJBQW1CO0VBQ25CLFNBQVM7RUFDVCxVQUFVO0VBQ1YsYUFBYTtFQUNiLG1DQUFtQztFQ1J2Qyw4QkFBOEI7RUFDOUIsZ0JBQWdCO0NEU2Y7O0FBWEw7RUNJUSxzQkZGTTtDRUdUOztBRExMO0VBYVEsWUFBWTtFQ1poQiw4QkFBOEI7RUFDOUIsZ0JBQWdCO0NEYWY7O0FBZkw7RUNJUSxzQkZGTTtDRUdUOztBQ0xMO0VBQ0k7SUFDSSwwQkFBaUI7R0w4bUJ0QjtDQUNGIiwiZmlsZSI6InN0eWxlLmNzcyJ9 */
