@@ -6,3 +6,10 @@
     }
 }
 
+@mixin accent-200($accent){
+    border: 2px solid $accent;
+    cursor: pointer;
+    &:hover{
+        border-color: $color-b;
+    }
+}

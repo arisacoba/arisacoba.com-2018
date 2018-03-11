@@ -1,17 +1,46 @@
+.center{
+    width: 495px;
+    min-height: 500px;
+    margin: 40px;
+    position: relative;
+    > .card{
+        width: 360px;
+        position: absolute;
+        @include accent-200($accent);
+        transition: top 0.2s, left 0.2s;
+        > img{
+            width: 100%;
+        }
+
+        $begin: 1;
+        $end: 7;
+        
+        @for $i from $begin through $end{
+            &.-c#{$i}{
+                z-index: ($end - $i) + 1;
+                top: #{($i * 24)}px;
+                left: #{($i * 24)}px;
+            }
+        }
+    }
+}
+
 .centerpiece{
     width: 360px;
-    position: relative;
-    margin: 40px;
-    > .circle{
-        position: absolute;
-        top: 24%;
-        left: 32%;
-        width: 130px;
-        animation: spin 8s infinite linear;
-        @include border-200($color-b);
-    }
-    > .image{
-        width: 100%;
-        @include border-200($color-b);
+    overflow: hidden;
+    > .content{
+        width: 360px;
+        position: relative;
+        > .circle{
+            position: absolute;
+            top: 24%;
+            left: 32%;
+            width: 130px;
+            animation: spin 8s infinite linear;
+            @include border-200($color-b);
+        }
+        > .image{
+            width: 100%;
+        }
     }
 }
