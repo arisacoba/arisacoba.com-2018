@@ -1,0 +1,51 @@
+.container{
+    display: flex;
+    width: 1020px;
+    justify-content: space-between;
+    align-items: center;
+    > .left, .right{
+        max-width: 280px;
+    }
+    .left{
+        > .info p{
+            margin-top: 0;
+            margin-bottom: 0;
+            &::before{
+                content:'';
+                background-color: #fff;
+                width: 36px;
+                height: 2px;
+                display: inline-block;
+                vertical-align: middle;
+                margin-right: 8px;
+            }
+        }
+        > .socials{
+            margin-top: 40px;
+            > a{
+                display: block;
+                font-size: 1.6em;
+                margin-bottom: 4px;
+                &:hover{
+                    color: $font-b;
+                }
+            }
+        }
+        .info, .socials{
+            @include border-200($font-b);
+        }
+    }
+    .right{
+        > .info{
+            @include border-200($font-b);
+            > h4{
+                text-transform: uppercase;
+                letter-spacing: 1px;
+            }
+            > a{
+                display: block;
+                margin-bottom: 4px;
+            }
+        }
+    }
+}
