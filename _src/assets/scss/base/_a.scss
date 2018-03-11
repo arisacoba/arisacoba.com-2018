@@ -1,0 +1,24 @@
+a{
+    &.underline-italic{
+        font-style: italic;
+        text-decoration: underline;
+        font-family: $font-a;
+        color: #fff;
+        letter-spacing: 3px;
+        font-weight: 500;
+        cursor: pointer;
+        &.-s100{
+            letter-spacing: 1px;
+        }
+    }
+    &:hover{
+        color: $color-b;
+    }
+    &.bg-change{
+        text-decoration: none;
+        &:hover span{
+            background-color: $color-b;
+            color: #fff;
+        }
+    }
+}

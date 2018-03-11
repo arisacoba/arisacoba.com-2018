@@ -1,8 +1,13 @@
 @import './../../node_modules/sanitize.css/sanitize.css';
 @import url('https://fonts.googleapis.com/css?family=Rubik');
+@import url('https://fonts.googleapis.com/css?family=Space+Mono');
 
 @import './scss/variables';
+@import './scss/media';
 @import './scss/mixins/borders';
 @import './scss/base/body';
+@import './scss/base/span';
+@import './scss/base/a';
+@import './scss/components/container';
 @import './scss/components/centerpiece';
 @import './scss/keyframes/centerpiece';
