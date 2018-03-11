@@ -5,6 +5,11 @@
   "main": "index.js",
   "repository": "https://github.com/arisacoba/arisacoba.github.io.git",
   "author": "Aris Acoba <aris.acoba@gmail.com>",
+  "scripts": {
+    "build": "node metalsmith.js",
+    "build:prod": "NODE_ENV=production node metalsmith.js",
+    "start": "yarn run metalstart"
+  },
   "license": "MIT",
   "dependencies": {
     "jstransformer-pug": "^0.3.0",
