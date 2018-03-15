@@ -3,9 +3,9 @@ function getCurrentClass(obj_name){
 }
 
 $(".center").on("click", ".stack", function() {
+    var _numOfChildren = $('.center').children().length;
     var _begin = '-s0';
     var _end = '-s6';
-    var _numOfChildren = $('.center').children().length;
 
     var _current = this;
     var _currentIndex = $(this).index();
