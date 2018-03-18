@@ -1,11 +1,17 @@
 .center{
     min-width: 495px;
     min-height: 500px;
-    margin: 40px;
+    margin: 28px;
+    @include desktop{
+        margin: 40px;
+    }
     position: relative;
     > .stack{
         width: 360px;
         min-height: 220px;
+        @include phone{
+            width: 320px;
+        }
         background-color: rgba(255,255,255,0.3);
         position: absolute;
         @include accent-200($accent);
@@ -30,13 +36,20 @@
 .centerpiece{
     width: 360px;
     overflow: hidden;
+    @include phone{
+        width: 320px;
+    }
     > .content{
-        width: 360px;
+        width: 100%;
         position: relative;
         > .circle{
             position: absolute;
             top: 24%;
             left: 32%;
+            @include phone{
+                top: 23%;
+                left: 30%;
+            }
             width: 130px;
             animation: spin 8s infinite linear;
             @include border-200($color-b);
