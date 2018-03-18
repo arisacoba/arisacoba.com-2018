@@ -1,11 +1,14 @@
 @import './../../node_modules/sanitize.css/sanitize.css';
 @import url('https://fonts.googleapis.com/css?family=Rubik');
 @import url('https://fonts.googleapis.com/css?family=Space+Mono');
+@import './../../node_modules/modularscale-sass/stylesheets/modularscale';
+
 
 @import './scss/variables';
 @import './scss/media';
 @import './scss/mixins/borders';
 @import './scss/base/body';
+@import './scss/base/modularscale';
 @import './scss/base/span';
 @import './scss/base/a';
 @import './scss/components/container';

@@ -1,4 +1,8 @@
 .container{
+    @include phone{
+        font-size: ms(1);
+        line-height: ms(2);
+    }
     @include desktop{
         display: flex;
         max-width: $desktop-width;
