@@ -2,9 +2,30 @@ doctype html
 block vars
 html(lang="en")
    head
+     script(async src="https://www.googletagmanager.com/gtag/js?id=UA-115566708-1")
+     script.
+         window.dataLayer = window.dataLayer || [];
+         function gtag(){dataLayer.push(arguments);}
+         gtag('js', new Date());
+
+         gtag('config', 'UA-115566708-1');
      title #{title}
      meta(name="viewport" content="width=device-width, initial-scale=1.0")
      meta(name="descritpion" content=description)
+
+     meta(property="og:title" content=title)
+     meta(property="og:description" content=description)
+     meta(property="og:image" content=image)
+     meta(property="og:url" content=currentPath)
+     meta(property="og:type" content="website")
+     meta(property="fb:app_id" content="177181859756472")
+
+     meta(name="twitter:title" content=title)
+     meta(name="twitter:description" content=description)
+     meta(name="twitter:image" content=image)
+     meta(name="twitter:card" content="summary_large_image")
+     meta(name="twitter:site" content="@arisacoba")
+
      link(rel="stylesheet" href="assets/style.css")
      link(rel="icon" href="assets/images/aris-acoba.ico")
    body
