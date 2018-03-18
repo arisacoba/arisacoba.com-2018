@@ -8,14 +8,17 @@ html{
 }
 
 body{
- height: 100%;
- background-color: $color-a;
- display: flex;
- justify-content: center;
- align-items: center;
- font-family: $font-b;
- font-size: 14px;
- line-height: 1.6em;
- color: #fff;
- letter-spacing: 0.4px;
+    height: 100%;
+    background-color: $color-a;
+    font-family: $font-b;
+    font-size: 14px;
+    line-height: 1.6em;
+    color: #fff;
+    letter-spacing: 0.4px;
+    overflow-x: hidden;
+    @include desktop{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
