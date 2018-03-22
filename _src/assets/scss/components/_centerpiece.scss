@@ -9,6 +9,7 @@
     > .stack{
         width: 360px;
         min-height: 220px;
+        user-select: none;
         @include phone{
             width: 320px;
         }
