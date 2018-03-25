@@ -1,7 +1,11 @@
 .container{
     @include phone{
         font-size: ms(1);
-        line-height: ms(2);
+        line-height: ms(3);
+    }
+    @include tablet{
+        font-size: ms(1);
+        line-height: ms(3);
     }
     @include desktop{
         display: flex;
@@ -26,32 +30,21 @@
         @include desktop{
             margin-top: 0;
         }
-        > .info p{
-            margin-top: 0;
-            margin-bottom: 0;
-            &::before{
-                content:'';
-                background-color: #fff;
-                width: 36px;
-                height: 2px;
-                display: inline-block;
-                vertical-align: middle;
-                margin-right: 8px;
-            }
-        }
-        > .socials{
-            margin-top: 40px;
-            > a{
-                display: block;
-                font-size: 1.6em;
-                margin-bottom: 4px;
-                &:hover{
-                    color: $font-b;
+        > .info{
+            @include border-200($font-b);
+            > p{
+                margin-top: 0;
+                margin-bottom: 0;
+                &::before{
+                    content:'';
+                    background-color: #fff;
+                    width: 36px;
+                    height: 2px;
+                    display: inline-block;
+                    vertical-align: middle;
+                    margin-right: 8px;
                 }
             }
-        }
-        .info, .socials{
-            @include border-200($font-b);
         }
     }
     .right{
@@ -68,6 +61,17 @@
             > a{
                 display: block;
                 margin-bottom: 4px;
+            }
+        }
+        > .socials{
+            @include border-200($font-b);
+            > a{
+                display: block;
+                font-size: 1.6em;
+                margin-bottom: 4px;
+                &:hover{
+                    color: $font-b;
+                }
             }
         }
     }
