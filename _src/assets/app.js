@@ -2,49 +2,73 @@ function getCurrentClass(obj_name){
     return obj_name.className.match(/-s\d+/) + '';
 }
 
-$(".center").on("click", ".stack", function() {
-    var _numOfChildren = $('.center').children().length;
-    var _begin = '-s0';
-    var _end = '-s6';
+function removeClass(obj,className){
+    if (obj.classList){
+        obj.classList.remove(className);
+    } else{
+        obj.className = obj.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
+    }
+}
 
-    var _current = this;
-    var _currentIndex = $(this).index();
-    var _currentClass = getCurrentClass(this);
+function addClass(obj,className){
+    if (obj.classList){
+        obj.classList.add(className);
+    } else{
+        obj.className += ' ' + className;
+    }
+}
 
-    console.log( '--- index: ' +  _currentIndex + ' current: ' + _currentClass );
-
-    var _next = _current.nextSibling;
-    var _prev = _current.previousSibling;
-    var _nextIndex = 0;
-    var _prevIndex = _currentIndex;
-    var _inCount = _numOfChildren;
+function fixStacking(obj,ind,numOfChildren){
+    let _begin = '-s0',
+        _end = '-s6',
+        _current = obj,
+        _currentIndex = ind,
+        _currentClass = getCurrentClass(obj),
+        _next = obj.nextSibling,
+        _prev = obj.previousSibling,
+        _nextIndex = 0,
+        _prevIndex = _currentIndex,
+        _inCount = numOfChildren;
 
     if ( getCurrentClass(_current) === _begin ){
-        $(_current).removeClass( getCurrentClass(_current) ).addClass( _end);
-        var _nextIndex = -1;
+        removeClass( _current,getCurrentClass(_current) );
+        addClass( _current,_end );
+
+        _nextIndex = -1;
         _inCount -= 1;
     }else{
-        $(_current).removeClass( getCurrentClass(_current) ).addClass( _begin );
+        removeClass( _current,getCurrentClass(_current) );
+        addClass( _current,_begin );
     }
 
     // loop on next siblings
     if ( _next !== null ){
         while( _next !== null ){
             _nextIndex += 1 ;
-            $(_next).removeClass( getCurrentClass(_next) ).addClass( '-s' + _nextIndex );
-            var _next = _next.nextSibling;
+            removeClass( _next,getCurrentClass(_next) );
+            addClass( _next,'-s' + _nextIndex );
+            _next = _next.nextSibling;
         }
     }
 
     // loop on previous siblings
     if ( _currentIndex > 0 ){
         while( _currentIndex !== 0 ){
-            var _prevIndex = _inCount - 1;
-            $(_prev).removeClass( getCurrentClass(_prev) ).addClass( '-s' + _prevIndex );
-            var _prev = _prev.previousSibling;
+            _prevIndex = _inCount - 1;
+            removeClass( _prev,getCurrentClass(_prev) );
+            addClass( _prev, '-s' + _prevIndex );
+
+            _prev = _prev.previousSibling;
             _inCount -= 1;
             _currentIndex -= 1;
         }
-
     }
-});
+}
+
+let el = document.getElementsByClassName('stack');
+
+for(let i=0; i < 7; i++){
+    el[i].addEventListener('click', function(event){
+        fixStacking(this,i,el.length);
+    });
+}
