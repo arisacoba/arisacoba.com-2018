@@ -21,7 +21,7 @@
         }
         @include desktop{
             margin: 0;
-            width: 280px;
+            width: 260px;
         }
         transition: 0.6s;
     }
@@ -35,16 +35,10 @@
             > p{
                 margin-top: 0;
                 margin-bottom: 0;
-                &::before{
-                    content:'';
-                    background-color: #fff;
-                    width: 36px;
-                    height: 2px;
-                    display: inline-block;
-                    vertical-align: middle;
-                    margin-right: 8px;
-                }
             }
+        }
+        > .socials{
+            margin-top: 40px;
         }
     }
     .right{
@@ -63,16 +57,17 @@
                 margin-bottom: 4px;
             }
         }
-        > .socials{
-            @include border-200($font-b);
-            > a{
-                display: block;
-                font-size: 1.6em;
-                margin-bottom: 4px;
-                &:hover{
-                    color: $font-b;
-                }
-            }
+    }
+}
+
+.socials{
+    @include border-200($font-b);
+    > a{
+        display: block;
+        font-size: 1.6em;
+        margin-bottom: 4px;
+        &:hover{
+            color: $font-b;
         }
     }
 }

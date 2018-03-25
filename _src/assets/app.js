@@ -20,7 +20,7 @@ function addClass(obj,className){
 
 function fixStacking(obj,ind,numOfChildren){
     let _begin = '-s0',
-        _end = '-s6',
+        _end = '-s13',
         _current = obj,
         _currentIndex = ind,
         _currentClass = getCurrentClass(obj),
@@ -67,7 +67,7 @@ function fixStacking(obj,ind,numOfChildren){
 
 let el = document.getElementsByClassName('stack');
 
-for(let i=0; i < 7; i++){
+for(let i=0; i < 14; i++){
     el[i].addEventListener('click', function(event){
         fixStacking(this,i,el.length);
     });
