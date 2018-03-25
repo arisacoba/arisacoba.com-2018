@@ -581,7 +581,7 @@ html {
 
 body {
   height: 100%;
-  background-color: #E33C3B;
+  background-color: #F03433;
   font-family: "Space Mono", monospace;
   font-size: 14px;
   line-height: 1.6em;
@@ -602,7 +602,7 @@ body {
 }
 
 span.highlight {
-  background: #0000FF;
+  background: #1C2AFC;
   color: #fff;
   padding-left: 4px;
   padding-right: 4px;
@@ -623,7 +623,7 @@ a.underline-italic.-s100 {
 }
 
 a:hover {
-  color: #0000FF;
+  color: #1C2AFC;
 }
 
 a.bg-change {
@@ -772,7 +772,7 @@ a.bg-change:hover span {
           user-select: none;
   background-color: rgba(255, 255, 255, 0.3);
   position: absolute;
-  border: 2px solid #0000FF;
+  border: 2px solid #1C2AFC;
   cursor: pointer;
   transition: top 0.2s, left 0.2s;
 }
