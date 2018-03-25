@@ -15,8 +15,9 @@ body{
     line-height: 1.6em;
     color: #fff;
     letter-spacing: 0.4px;
-    overflow: hidden;
+    overflow-x: hidden;
     @include desktop{
+        overflow-y: hidden;
         display: flex;
         justify-content: center;
         align-items: center;
