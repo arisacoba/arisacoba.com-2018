@@ -31,8 +31,8 @@
             margin-top: 0;
         }
         > .info{
-            @include border-200($font-b);
             > p{
+                @include border-200($font-b);
                 margin-top: 0;
                 margin-bottom: 16px;
             }
