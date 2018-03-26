@@ -1,13 +1,13 @@
 .center{
     min-width: 495px;
     min-height: 500px;
-    margin: 28px;
+    margin: 0 28px 120px;
     @include desktop{
-        margin: -80px 40px 0;
+        margin: -60px 40px 0;
     }
     position: relative;
     > .stack{
-        width: 390px;
+        width: 360px;
         min-height: 200px;
         user-select: none;
         @include phone{
