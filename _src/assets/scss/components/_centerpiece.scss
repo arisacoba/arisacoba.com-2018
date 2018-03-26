@@ -13,7 +13,7 @@
         @include phone{
             width: 320px;
         }
-        // background-color: rgba(255,255,255,0.3);
+        background-image: linear-gradient(170deg, transparent 66%, rgba(255,255,255,0.3));
         position: absolute;
         @include accent-200(transparent);
         transition: top 0.2s, left 0.2s;
