@@ -34,7 +34,7 @@
             @include border-200($font-b);
             > p{
                 margin-top: 0;
-                margin-bottom: 0;
+                margin-bottom: 16px;
             }
         }
         > .socials{
