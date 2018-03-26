@@ -45,11 +45,11 @@
         position: relative;
         > .circle{
             position: absolute;
-            top: 24.5%;
-            left: 33.5%;
+            top: 23.5%;
+            left: 32.5%;
             @include phone{
                 top: 22%;
-                left: 29.5%;
+                left: 30%;
             }
             width: 130px;
             animation: spin 8s infinite linear;
