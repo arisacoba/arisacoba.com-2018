@@ -2,6 +2,7 @@
     @include phone{
         font-size: ms(1);
         line-height: ms(3);
+        overflow-x: hidden;
     }
     @include tablet{
         font-size: ms(1);
