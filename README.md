@@ -16,6 +16,5 @@
 	```
 
 ## TODO
-1. ☐ Convert to javascript
-2. ☐ Linked lists of projects
-3. ☐ Draggable items (for fun)
+1. ☐ Linked lists of projects
+2. ☐ Draggable items (for fun)
