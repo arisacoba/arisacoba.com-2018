@@ -49,8 +49,9 @@
             top: 23.5%;
             left: 32.5%;
             @include phone{
-                top: 22%;
-                left: 30%;
+                top: 23%;
+                left: 30.5%;
+                width: 110px;
             }
             width: 130px;
             animation: spin 8s infinite linear;
