@@ -2,6 +2,7 @@
     min-width: 495px;
     min-height: 500px;
     margin: 0 28px 120px;
+    @include no-select;
     @include desktop{
         margin: -60px 40px 0;
     }
