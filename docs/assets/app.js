@@ -72,3 +72,27 @@ for(let i=0; i < 14; i++){
         fixStacking(this,i,el.length);
     });
 }
+
+// enable arrow keys
+
+function indexInClass(collection, node) {
+  for (var i = 0; i < collection.length; i++) {
+    if (collection[i] === node)
+      return i;
+  }
+  return -1;
+}
+
+window.addEventListener("keydown", checkKeyPressed);
+
+function checkKeyPressed(e){
+    let active = document.getElementsByClassName('-s0');
+
+    if (e.keyCode == '37') {
+       // left arrow
+    }
+    else if (e.keyCode == '39') {
+       // right arrow
+       fixStacking(active[0], indexInClass(el, active[0]), el.length);
+    }
+}
