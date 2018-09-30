@@ -20,7 +20,7 @@ function addClass(obj,className){
 
 function fixStacking(obj,ind,numOfChildren){
     let _begin = '-s0',
-        _end = '-s13',
+        _end = '-s' + (numOfChildren - 1),
         _current = obj,
         _currentIndex = ind,
         _currentClass = getCurrentClass(obj),
@@ -67,7 +67,7 @@ function fixStacking(obj,ind,numOfChildren){
 
 let el = document.getElementsByClassName('stack');
 
-for(let i=0; i < 14; i++){
+for(let i=0; i < el.length; i++){
     el[i].addEventListener('click', function(event){
         fixStacking(this,i,el.length);
     });
@@ -91,7 +91,7 @@ function checkKeyPressed(e){
     if (e.keyCode == '37') {
        // left arrow
     }
-    else if (e.keyCode == '39') {
+    else if (e.keyCode == '39' || e.keyCode == '74' || e.keyCode == '76') {
        // right arrow
        fixStacking(active[0], indexInClass(el, active[0]), el.length);
     }
