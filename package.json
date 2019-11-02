@@ -13,6 +13,8 @@
   "license": "MIT",
   "dependencies": {
     "jstransformer-pug": "^0.3.0",
+    "lodash": "^4.17.13",
+    "lodash.template": "^4.5.0",
     "metalsmith": "^2.3.0",
     "metalsmith-fingerprint-ignore": "^2.0.0",
     "metalsmith-jstransformer": "^0.13.0",
