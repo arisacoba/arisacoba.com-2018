@@ -1,3 +1,7 @@
+⚠️ Old version; no longer maintained
+
+<hr>
+
 # Folio • arisacoba.com
 
 <p align='center'>
